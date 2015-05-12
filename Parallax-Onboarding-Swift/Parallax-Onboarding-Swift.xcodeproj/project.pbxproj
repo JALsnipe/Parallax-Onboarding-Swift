@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6C89987E1B0194910091A910 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89987D1B0194910091A910 /* AppDelegate.swift */; };
-		6C8998801B0194910091A910 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89987F1B0194910091A910 /* ViewController.swift */; };
+		6C8998801B0194910091A910 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89987F1B0194910091A910 /* OnboardingViewController.swift */; };
 		6C8998831B0194910091A910 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C8998811B0194910091A910 /* Main.storyboard */; };
 		6C8998851B0194910091A910 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C8998841B0194910091A910 /* Images.xcassets */; };
 		6C8998881B0194910091A910 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C8998861B0194910091A910 /* LaunchScreen.xib */; };
 		6C8998941B0194920091A910 /* Parallax_Onboarding_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8998931B0194920091A910 /* Parallax_Onboarding_SwiftTests.swift */; };
+		6C8998A01B0196020091A910 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89989F1B0196020091A910 /* ContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		6C8998781B0194910091A910 /* Parallax-Onboarding-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Parallax-Onboarding-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C89987C1B0194910091A910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C89987D1B0194910091A910 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6C89987F1B0194910091A910 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6C89987F1B0194910091A910 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		6C8998821B0194910091A910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C8998841B0194910091A910 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6C8998871B0194910091A910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6C89988D1B0194920091A910 /* Parallax-Onboarding-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Parallax-Onboarding-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C8998921B0194920091A910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C8998931B0194920091A910 /* Parallax_Onboarding_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parallax_Onboarding_SwiftTests.swift; sourceTree = "<group>"; };
+		6C89989F1B0196020091A910 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				6C89987D1B0194910091A910 /* AppDelegate.swift */,
-				6C89987F1B0194910091A910 /* ViewController.swift */,
+				6C89987F1B0194910091A910 /* OnboardingViewController.swift */,
+				6C89989F1B0196020091A910 /* ContentViewController.swift */,
 				6C8998811B0194910091A910 /* Main.storyboard */,
 				6C8998841B0194910091A910 /* Images.xcassets */,
 				6C8998861B0194910091A910 /* LaunchScreen.xib */,
@@ -161,6 +164,7 @@
 				TargetAttributes = {
 					6C8998771B0194910091A910 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 76Q446F2EP;
 					};
 					6C89988C1B0194920091A910 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -212,7 +216,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C8998801B0194910091A910 /* ViewController.swift in Sources */,
+				6C8998801B0194910091A910 /* OnboardingViewController.swift in Sources */,
+				6C8998A01B0196020091A910 /* ContentViewController.swift in Sources */,
 				6C89987E1B0194910091A910 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Parallax-Onboarding-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Parallax-Onboarding-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
