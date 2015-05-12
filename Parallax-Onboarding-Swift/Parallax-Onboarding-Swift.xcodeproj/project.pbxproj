@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C89987E1B0194910091A910 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89987D1B0194910091A910 /* AppDelegate.swift */; };
+		6C8998801B0194910091A910 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89987F1B0194910091A910 /* ViewController.swift */; };
+		6C8998831B0194910091A910 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C8998811B0194910091A910 /* Main.storyboard */; };
+		6C8998851B0194910091A910 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C8998841B0194910091A910 /* Images.xcassets */; };
+		6C8998881B0194910091A910 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C8998861B0194910091A910 /* LaunchScreen.xib */; };
+		6C8998941B0194920091A910 /* Parallax_Onboarding_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8998931B0194920091A910 /* Parallax_Onboarding_SwiftTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6C89988E1B0194920091A910 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C8998701B0194910091A910 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C8998771B0194910091A910;
+			remoteInfo = "Parallax-Onboarding-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6C8998781B0194910091A910 /* Parallax-Onboarding-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Parallax-Onboarding-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C89987C1B0194910091A910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C89987D1B0194910091A910 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6C89987F1B0194910091A910 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6C8998821B0194910091A910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6C8998841B0194910091A910 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6C8998871B0194910091A910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6C89988D1B0194920091A910 /* Parallax-Onboarding-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Parallax-Onboarding-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C8998921B0194920091A910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C8998931B0194920091A910 /* Parallax_Onboarding_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parallax_Onboarding_SwiftTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6C8998751B0194910091A910 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C89988A1B0194920091A910 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C89986F1B0194910091A910 = {
+			isa = PBXGroup;
+			children = (
+				6C89987A1B0194910091A910 /* Parallax-Onboarding-Swift */,
+				6C8998901B0194920091A910 /* Parallax-Onboarding-SwiftTests */,
+				6C8998791B0194910091A910 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6C8998791B0194910091A910 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C8998781B0194910091A910 /* Parallax-Onboarding-Swift.app */,
+				6C89988D1B0194920091A910 /* Parallax-Onboarding-SwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C89987A1B0194910091A910 /* Parallax-Onboarding-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				6C89987D1B0194910091A910 /* AppDelegate.swift */,
+				6C89987F1B0194910091A910 /* ViewController.swift */,
+				6C8998811B0194910091A910 /* Main.storyboard */,
+				6C8998841B0194910091A910 /* Images.xcassets */,
+				6C8998861B0194910091A910 /* LaunchScreen.xib */,
+				6C89987B1B0194910091A910 /* Supporting Files */,
+			);
+			path = "Parallax-Onboarding-Swift";
+			sourceTree = "<group>";
+		};
+		6C89987B1B0194910091A910 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C89987C1B0194910091A910 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6C8998901B0194920091A910 /* Parallax-Onboarding-SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				6C8998931B0194920091A910 /* Parallax_Onboarding_SwiftTests.swift */,
+				6C8998911B0194920091A910 /* Supporting Files */,
+			);
+			path = "Parallax-Onboarding-SwiftTests";
+			sourceTree = "<group>";
+		};
+		6C8998911B0194920091A910 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C8998921B0194920091A910 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C8998771B0194910091A910 /* Parallax-Onboarding-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C8998971B0194920091A910 /* Build configuration list for PBXNativeTarget "Parallax-Onboarding-Swift" */;
+			buildPhases = (
+				6C8998741B0194910091A910 /* Sources */,
+				6C8998751B0194910091A910 /* Frameworks */,
+				6C8998761B0194910091A910 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Parallax-Onboarding-Swift";
+			productName = "Parallax-Onboarding-Swift";
+			productReference = 6C8998781B0194910091A910 /* Parallax-Onboarding-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6C89988C1B0194920091A910 /* Parallax-Onboarding-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C89989A1B0194920091A910 /* Build configuration list for PBXNativeTarget "Parallax-Onboarding-SwiftTests" */;
+			buildPhases = (
+				6C8998891B0194920091A910 /* Sources */,
+				6C89988A1B0194920091A910 /* Frameworks */,
+				6C89988B1B0194920091A910 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C89988F1B0194920091A910 /* PBXTargetDependency */,
+			);
+			name = "Parallax-Onboarding-SwiftTests";
+			productName = "Parallax-Onboarding-SwiftTests";
+			productReference = 6C89988D1B0194920091A910 /* Parallax-Onboarding-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6C8998701B0194910091A910 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Josh Lieberman";
+				TargetAttributes = {
+					6C8998771B0194910091A910 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					6C89988C1B0194920091A910 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 6C8998771B0194910091A910;
+					};
+				};
+			};
+			buildConfigurationList = 6C8998731B0194910091A910 /* Build configuration list for PBXProject "Parallax-Onboarding-Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6C89986F1B0194910091A910;
+			productRefGroup = 6C8998791B0194910091A910 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C8998771B0194910091A910 /* Parallax-Onboarding-Swift */,
+				6C89988C1B0194920091A910 /* Parallax-Onboarding-SwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6C8998761B0194910091A910 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C8998831B0194910091A910 /* Main.storyboard in Resources */,
+				6C8998881B0194910091A910 /* LaunchScreen.xib in Resources */,
+				6C8998851B0194910091A910 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C89988B1B0194920091A910 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6C8998741B0194910091A910 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C8998801B0194910091A910 /* ViewController.swift in Sources */,
+				6C89987E1B0194910091A910 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C8998891B0194920091A910 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C8998941B0194920091A910 /* Parallax_Onboarding_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C89988F1B0194920091A910 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C8998771B0194910091A910 /* Parallax-Onboarding-Swift */;
+			targetProxy = 6C89988E1B0194920091A910 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6C8998811B0194910091A910 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C8998821B0194910091A910 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6C8998861B0194910091A910 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C8998871B0194910091A910 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6C8998951B0194920091A910 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6C8998961B0194920091A910 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6C8998981B0194920091A910 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Parallax-Onboarding-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6C8998991B0194920091A910 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Parallax-Onboarding-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6C89989B1B0194920091A910 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Parallax-Onboarding-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Parallax-Onboarding-Swift.app/Parallax-Onboarding-Swift";
+			};
+			name = Debug;
+		};
+		6C89989C1B0194920091A910 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Parallax-Onboarding-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Parallax-Onboarding-Swift.app/Parallax-Onboarding-Swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C8998731B0194910091A910 /* Build configuration list for PBXProject "Parallax-Onboarding-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C8998951B0194920091A910 /* Debug */,
+				6C8998961B0194920091A910 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C8998971B0194920091A910 /* Build configuration list for PBXNativeTarget "Parallax-Onboarding-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C8998981B0194920091A910 /* Debug */,
+				6C8998991B0194920091A910 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6C89989A1B0194920091A910 /* Build configuration list for PBXNativeTarget "Parallax-Onboarding-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C89989B1B0194920091A910 /* Debug */,
+				6C89989C1B0194920091A910 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6C8998701B0194910091A910 /* Project object */;
+}
