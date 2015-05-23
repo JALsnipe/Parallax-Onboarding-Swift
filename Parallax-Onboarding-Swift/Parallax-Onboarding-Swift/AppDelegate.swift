@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Setup skip onboarding notification
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "skipOnboarding:", name: "kDismissOnboardingNotification", object: nil)
+        
         return true
     }
 
@@ -39,8 +43,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "kDismissOnboardingNotification", object: nil)
     }
 
-
+    func skipOnboarding(notification: NSNotification) {
+        
+        if let appContentVC = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("appContentVC") as? UIViewController {
+            let overlayView: UIView = UIScreen.mainScreen().snapshotViewAfterScreenUpdates(false)
+            appContentVC.view.addSubview(overlayView)
+            self.window?.rootViewController = appContentVC
+            UIView.animateWithDuration(0.4, delay: 0.0, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+                overlayView.alpha = 0
+            }, completion: { (finished) -> Void in
+                overlayView.removeFromSuperview()
+            })
+        }
+    }
 }
 
