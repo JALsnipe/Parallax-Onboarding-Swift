@@ -16,31 +16,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HDZ-rE-8LB">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HDZ-rE-8LB">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FdH-4h-lbt">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="FdH-4h-lbt">
+                                    <size key="itemSize" width="600" height="600"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="onboardingCell" id="jbk-do-VSO" customClass="OnboardingCollectionViewCell" customModule="Parallax_Onboarding_Swift" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cell" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzW-Eb-qxd">
+                                                    <rect key="frame" x="285" y="289" width="30" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t34-yh-If3">
+                                                    <rect key="frame" x="260" y="326" width="80" height="30"/>
+                                                    <state key="normal" title="Get Started">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="getStarted:" destination="jbk-do-VSO" eventType="touchUpInside" id="ZbM-Jw-Hsu"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="centerY" secondItem="nzW-Eb-qxd" secondAttribute="centerY" id="1iv-M7-kYO"/>
+                                            <constraint firstItem="t34-yh-If3" firstAttribute="top" secondItem="nzW-Eb-qxd" secondAttribute="bottom" constant="16" id="Fff-So-0Xr"/>
+                                            <constraint firstAttribute="centerX" secondItem="t34-yh-If3" secondAttribute="centerX" id="I5B-nb-FPV"/>
+                                            <constraint firstAttribute="centerX" secondItem="nzW-Eb-qxd" secondAttribute="centerX" id="KIS-jM-bPp"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="contentLabel" destination="nzW-Eb-qxd" id="UzS-Oh-ZNm"/>
+                                            <outlet property="getStartedButton" destination="t34-yh-If3" id="whH-mL-OK6"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
                             </collectionView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="zvA-Wh-XO3">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="zvA-Wh-XO3">
                                 <rect key="frame" x="281" y="555" width="39" height="37"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tj-it-fA0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tj-it-fA0">
                                 <rect key="frame" x="542" y="0.0" width="58" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hX1-Qm-5lB"/>
+                                    <constraint firstAttribute="width" constant="58" id="xCP-s4-G0q"/>
+                                </constraints>
                                 <state key="normal" title="Skip">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="skipOnboarding:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="adM-8F-Tac"/>
+                                    <action selector="skipOnboarding:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VhY-wR-MkL"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="zvA-Wh-XO3" secondAttribute="bottom" constant="8" id="2ux-n6-pDe"/>
+                            <constraint firstItem="HDZ-rE-8LB" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="5IY-Dd-HTg"/>
+                            <constraint firstItem="HDZ-rE-8LB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="6zV-yL-Yey"/>
+                            <constraint firstAttribute="trailing" secondItem="HDZ-rE-8LB" secondAttribute="trailing" id="Ht3-KA-nhP"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="HDZ-rE-8LB" secondAttribute="bottom" id="LNK-5S-sXW"/>
+                            <constraint firstAttribute="centerX" secondItem="zvA-Wh-XO3" secondAttribute="centerX" id="Yv4-fU-GQf"/>
+                            <constraint firstAttribute="trailing" secondItem="6tj-it-fA0" secondAttribute="trailing" id="Zz6-Hf-jvO"/>
+                            <constraint firstItem="6tj-it-fA0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="lVt-6E-zaj"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="onboardingCollectionView" destination="HDZ-rE-8LB" id="vpy-36-0Rp"/>
@@ -54,7 +105,7 @@
         <!--View Controller-->
         <scene sceneID="ti6-Gi-c13">
             <objects>
-                <viewController id="ffT-Os-hzZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="appContentVC" id="ffT-Os-hzZ" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wcr-em-1qc"/>
                         <viewControllerLayoutGuide type="bottom" id="K2L-Kl-E5Q"/>

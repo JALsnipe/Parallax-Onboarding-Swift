@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C3B8B551B10BBC600433CC2 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3B8B541B10BBC600433CC2 /* OnboardingCollectionViewCell.swift */; };
 		6C89987E1B0194910091A910 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89987D1B0194910091A910 /* AppDelegate.swift */; };
 		6C8998801B0194910091A910 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89987F1B0194910091A910 /* OnboardingViewController.swift */; };
 		6C8998831B0194910091A910 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C8998811B0194910091A910 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C3B8B541B10BBC600433CC2 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		6C8998781B0194910091A910 /* Parallax-Onboarding-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Parallax-Onboarding-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C89987C1B0194910091A910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C89987D1B0194910091A910 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				6C89987D1B0194910091A910 /* AppDelegate.swift */,
 				6C89987F1B0194910091A910 /* OnboardingViewController.swift */,
+				6C3B8B541B10BBC600433CC2 /* OnboardingCollectionViewCell.swift */,
 				6C89989F1B0196020091A910 /* ContentViewController.swift */,
 				6C8998811B0194910091A910 /* Main.storyboard */,
 				6C8998841B0194910091A910 /* Images.xcassets */,
@@ -219,6 +222,7 @@
 				6C8998801B0194910091A910 /* OnboardingViewController.swift in Sources */,
 				6C8998A01B0196020091A910 /* ContentViewController.swift in Sources */,
 				6C89987E1B0194910091A910 /* AppDelegate.swift in Sources */,
+				6C3B8B551B10BBC600433CC2 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +420,7 @@
 				6C8998991B0194920091A910 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C89989A1B0194920091A910 /* Build configuration list for PBXNativeTarget "Parallax-Onboarding-SwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +429,7 @@
 				6C89989C1B0194920091A910 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

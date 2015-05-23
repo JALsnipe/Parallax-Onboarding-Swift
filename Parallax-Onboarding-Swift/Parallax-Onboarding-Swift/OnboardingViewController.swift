@@ -30,10 +30,10 @@ class OnboardingViewController: UIViewController, UICollectionViewDataSource, UI
         // Background view setup
         let backgroundImage: UIImage! = UIImage(named: "bg_onboarding_gradient")
         let backgroundImageView: UIImageView! = UIImageView(image: backgroundImage)
-        backgroundImageView.frame = CGRectMake(0.0, 0.0, backgroundImageView.frame.size.width, backgroundImageView.frame.size.height)
+        backgroundImageView.frame = CGRectMake(0.0, 0.0, backgroundImageView.frame.size.width, self.view.frame.size.height)
         
         // Set scroll view frame to the size of the image
-        self.onboardingBackgroundScrollView.frame = self.view.frame
+        self.onboardingBackgroundScrollView = UIScrollView(frame: self.view.frame)
         self.onboardingBackgroundScrollView.addSubview(backgroundImageView)
         self.onboardingBackgroundScrollView.contentSize = backgroundImage.size
         self.onboardingBackgroundScrollView.userInteractionEnabled = false
@@ -71,24 +71,43 @@ extension OnboardingViewController : UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        var cell :UICollectionViewCell!
+        
+        var cell: UICollectionViewCell
         
         switch indexPath.row {
         case 0:
             // TODO: cell 1
-            return cell
+            if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("onboardingCell", forIndexPath: indexPath) as? OnboardingCollectionViewCell {
+                cell.contentLabel.text = "Cell 1"
+                cell.getStartedButton.hidden = true
+                return cell
+            }
             
         case 1:
             // TODO: cell 2
-            return cell
+            if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("onboardingCell", forIndexPath: indexPath) as? OnboardingCollectionViewCell {
+                cell.contentLabel.text = "Cell 2"
+                cell.getStartedButton.hidden = true
+                return cell
+            }
             
-        case 3:
-            // TODO: cell 3
-            return cell
+        case 2:
+            if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("onboardingCell", forIndexPath: indexPath) as? OnboardingCollectionViewCell {
+                cell.contentLabel.text = "Cell 3"
+                cell.contentLabel.textColor = UIColor.blackColor()
+                cell.getStartedButton.hidden = false
+                return cell
+            }
             
         default:
-            return cell;
+            if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("onboardingCell", forIndexPath: indexPath) as? OnboardingCollectionViewCell {
+                cell.contentLabel.text = "Default"
+                cell.getStartedButton.hidden = true
+                return cell
+            }
         }
+        
+        return UICollectionViewCell() // FIXME: Better error silencing
     }
 }
 
@@ -108,9 +127,28 @@ extension OnboardingViewController : UIScrollViewDelegate {
     func scrollViewDidScroll(scrollView: UIScrollView) {
         
         if (scrollView.isKindOfClass(UICollectionView)) {
+            // calculate percentage of scrolling
+            // scroll backgroundScrollView that percentage
+            
+            // returns the percent of the onboarding collection view scrolled as a decimal
             let percentScrolled: CGFloat! = fabs(scrollView.contentOffset.x / scrollView.contentSize.width)
             
-            // TODO: Math here
+            self.onboardingBackgroundScrollView.setContentOffset(CGPointMake(self.onboardingBackgroundScrollView.contentSize.width * percentScrolled, 0.0), animated: false)
+            
+            // Fade out page control and skip button on last cell
+            // Funky calculations ahead
+            let numSwipes = 1.0 // number of swipes until we start to fade
+            let offset = self.view.frame.size.width * CGFloat(numSwipes) // offset of fade start
+            
+            if (self.onboardingCollectionView.contentOffset.x > offset) {
+                // this caluclates the value between the 3rd and 4th cell to be a decimal between 1 and 0 to use for fading out some UI elements
+                let min = self.view.frame.size.width * 1; // start fade here, alpha should be 1
+                let max = self.view.frame.size.width * 2; // end fade here, alpha should be 0
+                
+                let alpha = (1 - (self.onboardingCollectionView.contentOffset.x - min) / (max - min));
+                self.onboardingPageControl.alpha = alpha
+                self.onboardingSkipButton.alpha = alpha
+            }
         }
     }
 }
