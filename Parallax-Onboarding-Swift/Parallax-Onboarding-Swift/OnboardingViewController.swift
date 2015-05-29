@@ -18,6 +18,8 @@ class OnboardingViewController: UIViewController, UICollectionViewDataSource, UI
     
     var onboardingBackgroundScrollView: UIScrollView!
     
+    let bufferForParallax: CGFloat = 20.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,7 +32,7 @@ class OnboardingViewController: UIViewController, UICollectionViewDataSource, UI
         // Background view setup
         let backgroundImage: UIImage! = UIImage(named: "bg_onboarding_gradient")
         let backgroundImageView: UIImageView! = UIImageView(image: backgroundImage)
-        backgroundImageView.frame = CGRectMake(0.0, 0.0, backgroundImageView.frame.size.width, self.view.frame.size.height)
+        backgroundImageView.frame = CGRectMake(0.0, 0.0, backgroundImageView.frame.size.width + bufferForParallax, self.view.frame.size.height + bufferForParallax)
         
         // Set scroll view frame to the size of the image
         self.onboardingBackgroundScrollView = UIScrollView(frame: self.view.frame)
@@ -41,10 +43,29 @@ class OnboardingViewController: UIViewController, UICollectionViewDataSource, UI
         self.onboardingBackgroundScrollView.showsVerticalScrollIndicator = false
         
         // Set origin and height of scroll view to devivice-specific values
-        self.onboardingBackgroundScrollView.frame = CGRectMake(0.0, 0.0, self.onboardingBackgroundScrollView.frame.size.width, self.onboardingBackgroundScrollView.frame.size.height)
+        self.onboardingBackgroundScrollView.frame = CGRectMake(-10.0, -10.0, self.onboardingBackgroundScrollView.frame.size.width + bufferForParallax, self.onboardingBackgroundScrollView.frame.size.height + bufferForParallax)
         
         self.view.addSubview(self.onboardingBackgroundScrollView)
         self.view.sendSubviewToBack(self.onboardingBackgroundScrollView)
+        
+        // parallax
+        
+        // vertical effect
+        let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y", type: UIInterpolatingMotionEffectType.TiltAlongVerticalAxis)
+        verticalMotionEffect.minimumRelativeValue = -10
+        verticalMotionEffect.maximumRelativeValue = 10
+        
+        // horizontal effect
+        let horizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x", type: UIInterpolatingMotionEffectType.TiltAlongHorizontalAxis)
+        horizontalMotionEffect.minimumRelativeValue = -10
+        horizontalMotionEffect.maximumRelativeValue = 10
+        
+        // Create group to combine both effects
+        let group = UIMotionEffectGroup()
+        group.motionEffects = [verticalMotionEffect, horizontalMotionEffect]
+        
+        // Add both effects to background view
+        self.onboardingBackgroundScrollView.addMotionEffect(group)
     }
 
     override func didReceiveMemoryWarning() {
